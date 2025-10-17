@@ -44,7 +44,7 @@ Parsing Fasta
 Fasta imported.
 {% endhighlight %}
 
-Gen stores sequences (contigs) and their variants in the form of `graphs', which
+Gen stores sequences (contigs) and their variants in the form of 'graphs', which
 can be listed as follows to confirm U00096.3 got imported:
 
 {% highlight shell %}
@@ -53,7 +53,7 @@ U00096.3
 {% endhighlight %}
 
 Now, we make our intentional edit, a partial deletion of the _lacZ_ gene.  This
-deletion is a well-known genotype and descendent strains can be used in further
+deletion is a well-known genotype and descendent strains can be used in various laboratory
 experiments.
 
 {% highlight shell %}
@@ -64,7 +64,7 @@ Updated with fasta file: empty.fa
 
 [Source file for empty.fa][empty-fa]
 
-We can also confirm the edit by computing a `diff' in GFA format between the
+We can also confirm the edit by computing a 'diff' in GFA format between the
 default (original) sample and the child, and then inspecting the GFA:
 
 {% highlight shell %}
