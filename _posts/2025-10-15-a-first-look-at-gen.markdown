@@ -79,12 +79,15 @@ P	Lac-Z-Partial-Deletion.u-00096.3-Start-366183-End-366276-Node-E-3-B-0-C-44298-
 
 We can also generate a fasta with the edit:
 
-{% highlight shell %} ➜ gen export fasta --sample lacZ-partial-deletion
-deletion.fa FASTA export called Exported to file deletion.fa {% endhighlight %}
+{% highlight shell %}
+➜ gen export fasta --sample lacZ-partial-deletion deletion.fa 
+FASTA export called 
+Exported to file deletion.fa
+{% endhighlight %}
 
 Next, assuming we've done the edit in the lab and have submitted a sample for
 sequencing, we would likely end up with a VCF file that captures the variants
-and can be applied to the graph using the 'update' command
+and can be applied to the graph using the 'update' command:
 
 {% highlight shell %}
 ➜ gen update vcf lacZ-partial-deletion-sequenced.vcf --sample lacZ-partial-deletion
@@ -124,7 +127,7 @@ L	ff1974eed255cde4bbb2cd29255ebfd3bf82cc321b145c9a35008627cd092119.0.1	+	b9957b8
 {% endhighlight %}
 
 We can also propagate annotations to descendant samples and check the
-coordinates.  For example, if we have a reference GFF file where _lacZ_ is
+coordinates.  For example, suppose we have a reference GFF file where _lacZ_ is
 annotated in the coordinates of the reference genome sequence. We can propagate
 this GFF file to our edited sequence and then 'grep' (search) for _lacZ_ in the
 result as a way to check the deletion happened (the coordinate range should be
