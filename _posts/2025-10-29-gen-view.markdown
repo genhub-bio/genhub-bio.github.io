@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Viewing E. coli changes with gen"
+date:   2025-10-29 12:01:33 -0400
+categories: gen genhub
+---
+
+In the last post, we looked at a simplified example of editing an _E. coli_ genome and incorporating the sequenced
+variants into a shared sequence graph.  In this post we'll build on that a bit by showing an in-terminal sequence viewer
+we created for gen that you can use to look at changes.
+
+To load the viewer, just run "gen view":
+
+{% highlight shell %}
+➜ gen view
+{% endhighlight %}
+
+Running this in the _E. coli_ repo, we get this as the initial screen:
+
+![Initial screen](../../../../../post-files/gen-view/view1.png)
+
+The reference genome is the default selection.  If you hit return, you see a zoomed-out view of the sequence:
+
+![Reference view](../../../../../post-files/gen-view/view2.png)
+
+You can hit "+" to zoom in on it a bit:
+
+![Zoomed in reference](../../../../../post-files/gen-view/view3.png)
+
+If you hit "Escape" to return to the sample list, you can then hit the down arrow to select the next sequence graph,
+with the deletion:
+
+![Intentional deletion edit](../../../../../post-files/gen-view/view4.png)
+
+You can use the arrow keys to navigate around the graph:
+
+![Navigation to deletion](../../../../../post-files/gen-view/view5.png)
+
+Again, you can hit "+" to expand one of the sequence nodes:
+
+![Zoomed in deleted region](../../../../../post-files/gen-view/view6.png)
+
+If you hit "Escape" again, you can then hit the down arrow again to select the last sequence graph:
+
+![Sequenced graph](../../../../../post-files/gen-view/view7.png)
+
+This is the sequence graph with changes from sequencing.  As before, you can navigate around them and expand on a node
+with "+":
+
+![Navigation around variant graph](../../../../../post-files/gen-view/view8.png)
+
+This is just a quick demonstration of our sequence graph viewer.  We have a lot more planned for it, but it's ready to
+use, and quite fun to play around with.  Try it out and let us know how it goes!
