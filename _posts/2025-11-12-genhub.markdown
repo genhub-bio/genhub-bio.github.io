@@ -1,0 +1,55 @@
+In our [first post](https://www.genhub.bio/blog/2025/10/20/a-first-look-at-gen), we showed a simple use of gen, our
+command line tool, for tracking an intended edit and then incorporating sequenced variants into a single lineage.  In
+our [second post](https://www.genhub.bio/blog/2025/11/3/gen-view-e-coli), we showed how to use gen's built-in sequence
+graph viewer to look at the changes.  In this post, we'll introduce our website for viewing sequence "repositories" or
+"repos" for short, which are similar to Github repos.
+
+We'll start with the [main page](https://www.genhub.bio/dashboard) that lists all the repos.  If you sign up for an
+account, you can pull down a repo or push one of your own.
+
+In the first blog post, we created a local repo and then made changes to an _E. coli_ genome.  We've since [pushed that repo to
+GenHub](https://www.genhub.bio/repos/david%40genhub.bio/e-coli-example).  Let's take a look at it.
+
+![Repo page](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/repo.png)
+
+All the files we used in the example are present: The reference _E. coli_ fasta (U00096.3.fa), the empty sequence file
+we used for a deletion (empty.fa), and the VCF whose changes we incorporated (lacZ-partial-deletion-sequenced.vcf).
+
+There is also a database file (default.db), that contains all the information about the changes from the two operations.
+You can click on the row for the database file, and it [launches a
+viewer](https://www.genhub.bio/repos/david%40genhub.bio/e-coli-example/database?database=.gen%2Fdefault.db&collection=default&sample=lacZ-partial-deletion&blockgroup=U00096.3&branch=main&operation=)
+for the sequence graphs for the various samples.  If you select the default collection, lacZ-partial-deletion for the
+sample, and U00096.3 for the block group, here's what you see:
+
+![Deletion view](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/deletion-view.png)
+
+If you change the sample to lacZ-partial-deletion-sequenced, you can view the sequence graph with both the deletion and
+the incorporated variants.
+
+![Variants view](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/variants-view.png)
+
+Actually, at present you will see a very zoomed-out version of the graph.  You can zoom in:
+
+![Variants view zoomed in](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/variants-zoomed.png)
+
+If you click on the operations tab, you can see the [operations we used in this
+repo](https://www.genhub.bio/repos/david%40genhub.bio/e-coli-example?tab=operations&branch=main), the associated files,
+and the timestamp:
+
+![Operations view](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/operations.png)
+
+If you have a branch that you'd like someone to review before applying the changes, you can [create a pull
+request](https://www.genhub.bio/repos/david%40genhub.bio/e-coli-example?tab=pull-requests&branch=main).  We'll be
+talking about branches and operations in a later post.
+
+![Pull request](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/pull-request.png)
+
+And also similar to Github, you can create [an issue regarding something about the
+repo](https://www.genhub.bio/repos/david%40genhub.bio/e-coli-example?tab=issues&branch=main):
+
+![Issue](https://raw.githubusercontent.com/genhub-bio/genhub-bio.github.io/refs/heads/main/post-files/genhub/issue.png)
+
+We saw earlier that you can use gen to track changes made or discovered for a sequence.  Hopefully this post shows how
+you can share and collaborate with others on those sequence changes using GenHub.  We hope you find it useful!
+
+If you want to download gen and try it out, here is the [page with the latest releases](https://github.com/genhub-bio/gen/releases).
