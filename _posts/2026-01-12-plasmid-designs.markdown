@@ -4,11 +4,11 @@ promoter and ribosome binding site and see which combinations work best.  Suppos
 variants we're using, in an easily accessible way.
 
 In this post, we're going to build on our last post about pooled designs, and show how to use gen to represent a
-combinatorial plasmid design.  Specifically, we will put together a library of expression plasmids for E. coli, to find
-the combination of promoter and ribosome binding site that result in the highest expression of an insulin precursor
-peptide.  This example will be slightly different from the previous one, because we'll be cloning a design into an
-existing plasmid, and we'll keep the reference part of the sequence in addition to the cloned library.  Also, the
-previous post had "dummy" data, and the sequences in this post are more realistic.
+combinatorial plasmid design.  Specifically, we will put together a library of expression plasmids for E. coli, with the
+ultimate goal of finding the combination of promoter and ribosome binding site that result in the highest expression of
+an insulin precursor peptide.  This example will be slightly different from the previous one, because we'll be cloning a
+design into an existing plasmid, and we'll keep the reference part of the sequence in addition to the cloned library.
+Also, the previous post had "dummy" data, and the sequences in this post are more realistic.
 
 As always, we initialize the repo first:
 
@@ -47,12 +47,14 @@ Then we can view it on the command line.
 gen view
 ```
 
-[screenshot]
+Navigating to the design "sample", we can see the sequence graph we've created:
+
+![Initial screen](../../../../../post-files/plasmid-design/design-view.png)
 
 We've also [pushed the repo to genhub](https://www.genhub.bio/repos/david-genhub-bio/plasmid-design-example), and the
 sequence graph [can be viewed
 there](https://www.genhub.bio/repos/david-genhub-bio/plasmid-design-example/database?database=.gen%2Fdefault.db&collection=default&sample=design&blockgroup=design&branch=main&operation=)
-as well.
+as well.  Also, the files we used in this example are there, and you can download them if you want to take a look.
 
 Unlike our previous example with importing a library, when updating, the original vector's sequence is preserved and
 included in the sequence graph.  This makes it clearer what part of the reference sequence is being replaced.
