@@ -32,8 +32,8 @@ Then, we update with the library.  We're putting the result into a new "virtual"
 is just the region identifier for the plasmid fasta.  The cloning region starts at locus 106 (inclusive) and ends at
 locus 539 (exclusive).  The parts are in parts.fa and the design.csv file lists the buckets of parts to use.  Gen will
 create a combinatorial design where all options for each bucket (CSV column in design.csv) are combined with all options
-for the other buckets. In this example, we have 3 buckets, with respectively 5, 2, and 1 part options.  This results in
-10 possible outcomes (5 * 2 * 1).
+for the other buckets. In this example, we have 3 buckets, with respectively 5, 3, and 1 part options.  This results in
+15 possible outcomes (5 * 3 * 1).
 
 ```
 > gen update library --new-sample design --path-name M77789.2 --start 106 --end 539 --library design.csv --parts parts.fa
